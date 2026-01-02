@@ -1,0 +1,61 @@
+/*
+ * @Author: 故乡情 s@epnz.com
+ * @Date: 2022-06-14 13:02:00
+ * @LastEditTime: 2025-12-26 01:07:33
+ * @LastEditors: 故乡情
+ * @Description: Block UI
+ * @FilePath: \docs\src\assets\style\_variables.scss
+ */
+@use "sass:color";
+
+$black: #000 !default;
+$blue: #4073ff !default;
+$default: #7d01f8 !default;
+$green: #04be02 !default;
+$marrs: #008080 !default;
+$orange: #ff6600 !default;
+$pink: #d63384 !default;
+$red: #ff3300 !default;
+$white: #ffffff !default;
+$yellow: #ffcc00 !default;
+$success: $green;
+$danger: $red;
+$info: $blue;
+$warning: $yellow;
+$primary: $default;
+
+$dark: #302e32 !default;
+$gray: #b0acb3 !default;
+$bright: #e3e1e4 !default;
+
+$dark-10: color.adjust($dark, $lightness: 10%);
+$dark-20: color.adjust($dark, $lightness: 20%);
+$dark-30: color.adjust($dark, $lightness: 30%);
+$dark-40: color.adjust($dark, $lightness: 40%);
+$dark-50: color.adjust($dark, $lightness: 50%);
+$dark-60: color.adjust($dark, $lightness: 60%);
+$dark-70: color.adjust($dark, $lightness: 70%);
+$dark-75: color.adjust($dark, $lightness: 75%);
+$dark-80: color.adjust($dark, $lightness: 80%);
+$dark-90: color.adjust($dark, $lightness: 90%);
+
+$unit: 5px;
+
+$colors: (
+    "black": $black,
+    "danger": $red,
+    "default": $default,
+    "success": $green,
+    "warning": $yellow,
+    "info": $blue,
+    "dark": $dark,
+    "white": $white,
+    "blue": $blue,
+    "green": $green,
+    "marrs": $marrs,
+    "orange": $orange,
+    "pink": $pink,
+    "red": $red,
+    "yellow": $yellow,
+    "gray": $gray,
+    "bright": $bright) !default;

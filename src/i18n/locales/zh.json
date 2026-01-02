@@ -1,0 +1,43 @@
+{
+    "header": {
+        "logo": "鸣鸣上门电工工具",
+        "docs": "文档"
+    },
+    "footer": {
+        "copyright": "Copyright © EPNZ Docs 2025 Powered by EPNZ.com v{{version}}",
+        "beian": "粤ICP备2022027147号"
+    },
+    "language": {
+        "zh": "中文",
+        "en": "English"
+    },
+    "home": {
+        "title": "欢迎使用EPNZ文档",
+        "subtitle": "这是EPNZ项目的官方文档",
+        "getStarted": "快速上手",
+        "features": {
+            "feature1": {
+                "title": "完整文档",
+                "description": "提供详细的API文档和使用指南"
+            },
+            "feature2": {
+                "title": "多语言支持",
+                "description": "支持中英文切换，满足不同用户需求"
+            },
+            "feature3": {
+                "title": "实时更新",
+                "description": "文档内容实时更新，保持与代码同步"
+            }
+        }
+    },
+    "docs": {
+        "changelog": "更新日志",
+        "start": "开始",
+        "quickStart": "快速上手"
+    },
+    "notFound": {
+        "title": "页面未找到",
+        "description": "抱歉，您访问的页面不存在",
+        "backToHome": "返回首页"
+    }
+}

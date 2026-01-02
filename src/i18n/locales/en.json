@@ -1,0 +1,43 @@
+{
+    "header": {
+        "logo": "MinMing Electrician Tool",
+        "docs": "Docs"
+    },
+    "footer": {
+        "copyright": "Copyright © EPNZ Docs 2025 Powered by EPNZ.com v{{version}}",
+        "beian": "粤ICP备2022027147号"
+    },
+    "language": {
+        "zh": "中文",
+        "en": "English"
+    },
+    "home": {
+        "title": "Welcome to EPNZ Documentation",
+        "subtitle": "This is the official documentation for EPNZ project",
+        "getStarted": "Get Started",
+        "features": {
+            "feature1": {
+                "title": "Complete Documentation",
+                "description": "Provide detailed API documentation and usage guides"
+            },
+            "feature2": {
+                "title": "Multi-language Support",
+                "description": "Support Chinese and English switching to meet different user needs"
+            },
+            "feature3": {
+                "title": "Real-time Updates",
+                "description": "Documentation content is updated in real-time to keep in sync with the code"
+            }
+        }
+    },
+    "docs": {
+        "changelog": "Changelog",
+        "start": "Start",
+        "quickStart": "Quick Start"
+    },
+    "notFound": {
+        "title": "Page Not Found",
+        "description": "Sorry, the page you are looking for does not exist",
+        "backToHome": "Back to Home"
+    }
+}

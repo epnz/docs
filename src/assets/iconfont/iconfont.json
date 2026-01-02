@@ -1,0 +1,65 @@
+{
+  "id": "5087646",
+  "name": "Electr",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5901133",
+      "name": "右",
+      "font_class": "right",
+      "unicode": "e7af",
+      "unicode_decimal": 59311
+    },
+    {
+      "icon_id": "5901135",
+      "name": "左",
+      "font_class": "left",
+      "unicode": "e7b0",
+      "unicode_decimal": 59312
+    },
+    {
+      "icon_id": "5901138",
+      "name": "上",
+      "font_class": "up",
+      "unicode": "e7b1",
+      "unicode_decimal": 59313
+    },
+    {
+      "icon_id": "5901139",
+      "name": "下",
+      "font_class": "down",
+      "unicode": "e7b3",
+      "unicode_decimal": 59315
+    },
+    {
+      "icon_id": "39460495",
+      "name": "英语",
+      "font_class": "english",
+      "unicode": "ec6a",
+      "unicode_decimal": 60522
+    },
+    {
+      "icon_id": "39460506",
+      "name": "中文",
+      "font_class": "chinese",
+      "unicode": "ec6b",
+      "unicode_decimal": 60523
+    },
+    {
+      "icon_id": "7736101",
+      "name": "github",
+      "font_class": "github",
+      "unicode": "e8ef",
+      "unicode_decimal": 59631
+    },
+    {
+      "icon_id": "9772929",
+      "name": "language",
+      "font_class": "language",
+      "unicode": "e6b4",
+      "unicode_decimal": 59060
+    }
+  ]
+}
