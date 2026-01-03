@@ -1,7 +1,7 @@
 /*
  * @Author: 故乡情 epnz@163com
  * @Date: 2025-12-26 01:09:18
- * @LastEditTime: 2026-01-03 02:22:29
+ * @LastEditTime: 2026-01-04 00:32:24
  * @LastEditors: 故乡情
  * @FilePath: \docs\src\components\Header.tsx
  * @Description: EPNZ Docs
@@ -112,7 +112,7 @@ export default function Header() {
                         )}
                     </div>
                     <div className="icon-item">
-                        <a href="https://github.com/epnz" className='icon-link' target="_blank">
+                        <a href="https://github.com/epnz/docs" className='icon-link' target="_blank">
                             <i className="iconfont icon-github"></i>
                         </a>
                     </div>

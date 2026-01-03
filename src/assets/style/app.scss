@@ -330,6 +330,10 @@ footer {
     &.active {
         color: $default;
     }
+
+    .expand-icon {
+        float: right;
+    }
 }
 
 .docs-content {
@@ -351,6 +355,7 @@ footer {
     cursor: pointer;
 }
 
+// 自定义用户选择样式
 .user-select-none {
     user-select: none;
 }
