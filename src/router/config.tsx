@@ -1,8 +1,8 @@
 /*
- * @Author: 故乡情 epnz@163com
+ * @Author: epnz epnz@163com
  * @Date: 2025-12-30 21:41:18
- * @LastEditTime: 2026-01-03 02:38:47
- * @LastEditors: 故乡情
+ * @LastEditTime: 2026-01-04 02:00:27
+ * @LastEditors: epnz
  * @FilePath: \docs\src\router\config.tsx
  * @Description: EPNZ Docs
  * Copyright (c) 2026 by epnz.com, All Rights Reserved.
