@@ -1,11 +1,12 @@
 {
     "header": {
         "logo": "MinMing Electrician Tool",
-        "docs": "Docs"
+        "docs": "Docs",
+        "epnzDocs": "EPNZ Docs"
     },
     "footer": {
         "copyright": "Copyright © EPNZ Docs 2025 Powered by EPNZ.com v{{version}}",
-        "beian": "粤ICP备2022027147号"
+        "beian": "粤ICP备18147432号"
     },
     "language": {
         "zh": "中文",

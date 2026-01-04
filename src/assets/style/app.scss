@@ -12,6 +12,10 @@ header {
     background-color: rgba($white, 0.8);
     border-bottom: 1px solid $bright;
     backdrop-filter: blur(5px);
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 100;
     /* 添加背景模糊效果 */
 
     .header-block {
@@ -137,7 +141,7 @@ header {
                 margin-left: 10px;
                 font-size: 1.25rem;
                 font-weight: 500;
-                align-items: center;
+                align-items: flex-end;
             }
         }
 
@@ -148,11 +152,11 @@ header {
 }
 
 main {
-    display: flex;
-    flex-wrap: wrap;
-
     .layout-menu {
         flex: 0 0 auto;
+        position: fixed;
+        top: 67px;
+        left: 0;
         width: 260px;
         height: calc(100vh - 72px);
         background-color: rgba($white, 0.8);
@@ -160,7 +164,13 @@ main {
     }
 
     .layout-content {
-        flex: 1 1 auto;
+        position: sticky;
+        top: 67px;
+        left: 260px;
+        width: calc(100% - 260px);
+        height: auto;
+        background-color: $white;
+        border-right: 1px solid $bright;
     }
 }
 
@@ -227,7 +237,7 @@ footer {
                 }
             }
 
-            .btn-gradient-default, 
+            .btn-gradient-default,
             .btn-gradient-bright {
                 width: 220px;
             }
@@ -308,6 +318,13 @@ footer {
         height: auto !important;
         border-right: none !important;
         border-bottom: 1px solid $bright;
+        overflow-y: auto;
+        position: static !important;
+    }
+
+    .layout-content {
+        position: static !important;
+        width: 100% !important;
     }
 }
 

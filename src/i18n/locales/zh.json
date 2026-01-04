@@ -1,11 +1,12 @@
 {
     "header": {
         "logo": "鸣鸣上门电工工具",
-        "docs": "文档"
+        "docs": "文档",
+        "epnzDocs": "EPNZ 文档中心"
     },
     "footer": {
         "copyright": "Copyright © EPNZ Docs 2025 Powered by EPNZ.com v{{version}}",
-        "beian": "粤ICP备2022027147号"
+        "beian": "粤ICP备18147432号"
     },
     "language": {
         "zh": "中文",

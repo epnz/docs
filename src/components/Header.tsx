@@ -1,7 +1,7 @@
 /*
  * @Author: 故乡情 epnz@163com
  * @Date: 2025-12-26 01:09:18
- * @LastEditTime: 2026-01-04 00:32:24
+ * @LastEditTime: 2026-01-04 16:41:17
  * @LastEditors: 故乡情
  * @FilePath: \docs\src\components\Header.tsx
  * @Description: EPNZ Docs
@@ -30,7 +30,7 @@ export default function Header() {
         // 获取当前路径，去掉语言前缀
         const currentPath = location.pathname;
         const pathWithoutLang = currentPath.replace(/^\/(zh|en)/, '');
-        
+
         // 构建新的路径
         let newPath;
         if (language === 'en') {
@@ -38,11 +38,11 @@ export default function Header() {
         } else {
             newPath = pathWithoutLang || '/';
         }
-        
+
         // 切换语言并更新URL
         i18n.changeLanguage(language);
         navigate(newPath);
-        
+
         // 关闭菜单
         setIsMenuOpen(false);
     };
@@ -52,19 +52,19 @@ export default function Header() {
      * 通过修改window.location.href来实现页面跳转
      * 使用绝对路径'/'指向网站根目录
      */
-    const toHome = () => {    
+    const toHome = () => {
         // 根据当前语言跳转到对应的首页
         const currentLang = i18n.language;
         const homePath = currentLang === 'en' ? '/en' : '/';
         navigate(homePath);
     }
-    
+
     return (
         <header>
             <div className="header-block px-3 py-2">
                 <div className="grid cursor-pointer user-select-none" onClick={() => toHome()}>
-                    <div className="logo"><img src={myLogo} alt="EPNZ Docs" /></div>
-                    <div className="title">EPNZ Docs</div>
+                    <div className="logo"><img src={myLogo} alt={t('header.epnzDocs')} /></div>
+                    <div className="title">{t('header.epnzDocs')}</div>
                 </div>
                 <div className="grid">
                 </div>
