@@ -193,6 +193,13 @@ footer {
 .markdown-content {
     margin: 0 auto;
 
+    h1 {
+        margin-bottom: 2rem;
+        color: $dark;
+        border-bottom: 1px solid $bright;
+        padding-bottom: 0.5rem;
+    }
+
     h2 {
         margin-bottom: 1.5rem;
         color: $dark;
