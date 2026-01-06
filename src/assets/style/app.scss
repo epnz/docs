@@ -171,6 +171,15 @@ main {
         height: auto;
         background-color: $white;
         border-right: 1px solid $bright;
+
+        .modified {
+            max-width: 1024px;
+            margin: 0 auto;
+            font-size: 0.875rem;
+            color: $gray;
+            padding: 3rem 0 1rem;
+            text-align: right;
+        }
     }
 }
 
@@ -191,19 +200,20 @@ footer {
 
 /* Markdown内容样式 */
 .markdown-content {
+    max-width: 1024px;
     margin: 0 auto;
 
     h1 {
         margin-bottom: 2rem;
         color: $dark;
-        border-bottom: 1px solid $bright;
+        border-bottom: 1px solid $dark-75;
         padding-bottom: 0.5rem;
     }
 
     h2 {
         margin-bottom: 1.5rem;
         color: $dark;
-        border-bottom: 1px solid $bright;
+        border-bottom: 1px solid $dark-75;
         padding-bottom: 0.5rem;
     }
 }

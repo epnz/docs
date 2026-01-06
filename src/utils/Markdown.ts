@@ -1,7 +1,7 @@
 /*
  * @Author: 故乡情 epnz@163com
  * @Date: 2025-12-30 01:51:58
- * @LastEditTime: 2025-12-30 03:25:14
+ * @LastEditTime: 2026-01-06 01:05:00
  * @LastEditors: 故乡情
  * @FilePath: \docs\src\utils\Markdown.ts
  * @Description: Markdown 工具类，用于遍历并导入 md 目录下的 .md 文件
@@ -15,6 +15,7 @@ export interface MarkdownFile {
     path: string;
     content: string;
     html?: string;
+    lastModified?: Date; // 添加文件保存时间字段
 }
 
 /**
@@ -43,12 +44,35 @@ export const importMarkdownFiles = async (): Promise<MarkdownFile[]> => {
             // 解析为 HTML
             const html = await marked(content);
 
+            // 获取文件信息以获取最后修改时间
+            let lastModified: Date | undefined;
+            try {
+                // 使用 Vite 的 import.meta.glob 获取文件元信息
+                const fileMeta = import.meta.glob('/md/**/*.md', {
+                    eager: false,
+                    query: '?url',
+                    import: 'default'
+                })[path] as () => Promise<string>;
+
+                if (fileMeta) {
+                    const fileUrl = await fileMeta();
+                    const response = await fetch(fileUrl, { method: 'HEAD' });
+                    const lastModifiedStr = response.headers.get('Last-Modified');
+                    if (lastModifiedStr) {
+                        lastModified = new Date(lastModifiedStr);
+                    }
+                }
+            } catch (error) {
+                console.error(`Failed to get file modification time for: ${path}`, error);
+            }
+
             // 添加到文件列表
             files.push({
                 name: fileName,
                 path,
                 content,
-                html
+                html,
+                lastModified // 添加最后修改时间
             });
         } catch (error) {
             console.error(`Failed to import markdown file: ${path}`, error);
@@ -87,11 +111,33 @@ export const getMarkdownFile = async (fileName: string): Promise<MarkdownFile | 
                     const content = await importFn();
                     const html = await marked(content);
 
+                    // 获取文件最后修改时间
+                    let lastModified: Date | undefined;
+                    try {
+                        const fileMeta = import.meta.glob('/md/**/*.md', {
+                            eager: false,
+                            query: '?url',
+                            import: 'default'
+                        })[path] as () => Promise<string>;
+
+                        if (fileMeta) {
+                            const fileUrl = await fileMeta();
+                            const response = await fetch(fileUrl, { method: 'HEAD' });
+                            const lastModifiedStr = response.headers.get('Last-Modified');
+                            if (lastModifiedStr) {
+                                lastModified = new Date(lastModifiedStr);
+                            }
+                        }
+                    } catch (error) {
+                        console.error(`Failed to get file modification time for: ${path}`, error);
+                    }
+
                     return {
                         name: fileName,
                         path,
                         content,
-                        html
+                        html,
+                        lastModified
                     };
                 } catch (error) {
                     console.error(`Failed to parse markdown file: ${path}`, error);

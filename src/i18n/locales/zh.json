@@ -34,7 +34,8 @@
     "docs": {
         "changelog": "更新日志",
         "start": "开始",
-        "quickStart": "快速上手"
+        "quickStart": "快速上手",
+        "lastUpdated": "最后更新于："
     },
     "notFound": {
         "title": "页面未找到",

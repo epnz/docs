@@ -34,7 +34,8 @@
     "docs": {
         "changelog": "Changelog",
         "start": "Start",
-        "quickStart": "Quick Start"
+        "quickStart": "Quick Start",
+        "lastUpdated": "Last Updated: "
     },
     "notFound": {
         "title": "Page Not Found",

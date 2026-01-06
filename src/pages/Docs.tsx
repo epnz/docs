@@ -1,8 +1,8 @@
 /*
  * @Author: 故乡情 epnz@163com
  * @Date: 2025-12-30 22:41:17
- * @LastEditTime: 2026-01-04 01:57:47
- * @LastEditors: epnz
+ * @LastEditTime: 2026-01-06 01:43:03
+ * @LastEditors: 故乡情
  * @FilePath: \docs\src\pages\Docs.tsx
  * @Description: EPNZ Docs
  * Copyright (c) 2025 by epnz.com, All Rights Reserved.
@@ -101,6 +101,7 @@ const Docs: React.FC = () => {
     const loadChangeMd = async (fileName: string) => {
         const file = await getMarkdownFile(`/${currentLang}/${fileName}`);
         setSelectedFile(file || null);
+        console.log(selectedFile);
     };
 
     // 处理菜单项点击
@@ -173,9 +174,21 @@ const Docs: React.FC = () => {
             <div className='layout-content'>
                 <div className='block-full p-3'>
                     {selectedFile ? (
-                        <div className="markdown-content">
-                            <div dangerouslySetInnerHTML={{ __html: selectedFile.html || '' }} />
-                        </div>
+                        <>
+                            <div className="markdown-content">
+                                <div dangerouslySetInnerHTML={{ __html: selectedFile.html || '' }} />
+                            </div>
+                            <div className='modified'>
+                                {t('docs.lastUpdated')}{selectedFile.lastModified?.toLocaleDateString(currentLang === 'en' ? 'en-US' : 'zh-CN', {
+                                    year: "numeric", 
+                                    month: "long", 
+                                    day: "2-digit", 
+                                    hour: "numeric", 
+                                    minute: "numeric", 
+                                    hour12:false 
+                                })}
+                            </div>
+                        </>
                     ) : (
                         <div className="no-content">
                             <p>请从左侧选择一个文档查看。</p>
